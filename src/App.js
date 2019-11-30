@@ -1,16 +1,14 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { MenuItem } from "./components/menuItem/MenuItem";
-
+import { MenuItemContainer } from 'components/menuItemContainer/MenuItemContainer'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
      
-          <MenuItem />
+          <MenuItemContainer/>
 
-      </header>
+ 
     </div>
   );
 }

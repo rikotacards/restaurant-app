@@ -3,6 +3,7 @@ import './menu-item.css';
 
 export const MenuItem = props => {
     //To do, pass in props
+    const { dishName } = props; 
   return (
    <div className='container'>
        <div className='title'>Pad Thai</div>

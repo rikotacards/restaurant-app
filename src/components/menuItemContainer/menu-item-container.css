@@ -1,0 +1,16 @@
+.grid-container {
+  display: grid;
+  grid-row-gap: 4px;
+  grid-column-gap: 4px;
+}
+
+@media (max-width: 700px) {
+  .conditional-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 701px) {
+  .conditional-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

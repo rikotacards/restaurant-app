@@ -21,7 +21,5 @@
     "react/jsx-curly-spacing": ["warn", "never"],
     "react/jsx-equals-spacing": ["warn", "never"],
     "react/jsx-indent": ["warn", "tab"],
-
-
   }
 }

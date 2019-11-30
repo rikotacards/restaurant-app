@@ -13,7 +13,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "json-server": "json-server --watch db.json --port 3001"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,7 +32,6 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react-hooks": "1.7.0"

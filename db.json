@@ -1,0 +1,16 @@
+{
+  "soul_food": {
+    "id": 1,
+    "mains": [
+      { "name": "Pad Thai", "price": 80 },
+      { "name": "Sweet Chili Chiken", "price": 150 },
+      { "name": "Prad ka pow", "price": 100 },
+      { "name": "Deep fried fish", "price": 160 },
+      { "name": "Beef noodles", "price": 100 },
+      { "name": "Prawns and stuff", "price": 190 }
+    ],
+    "address": "46 Elgin street",
+    "phoneNumber": "85473772",
+    "email": "soulFood@gmail.com"
+  }
+}

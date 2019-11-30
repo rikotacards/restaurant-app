@@ -1,0 +1,45 @@
+.container { 
+    display: flex;
+    flex-direction: column;
+    width: 290px; 
+    height: 400px; 
+    border: 1px solid black; 
+    background: transparent; 
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.title {
+    font-weight: 400;
+    color: black;
+    text-align: left;
+}
+
+.divider {
+    width: 100%;
+}
+
+.description {
+    width: 100%; 
+    color: gray; 
+    font-size: 12px; 
+    text-align: left;
+}
+
+.image {
+    width: 100%; 
+    height: 150px; 
+}
+
+.menu-item-button {
+    margin-top: auto;
+    width: 90%;
+    height: 40px; 
+    border-radius: 4px; 
+    background: transparent; 
+    align-self: center;
+}
+
+.menu-item-button:hover {
+    background: darkgray; 
+}

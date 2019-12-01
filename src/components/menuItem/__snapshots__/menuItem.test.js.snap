@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render MenuItem should only render div item with image and name 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="image"
+  >
+    IMAGE
+  </div>
+  <div
+    className="title"
+  />
+  <div
+    className="item-price"
+  />
+  <div
+    className="description"
+  />
+  <button
+    className="menu-item-button"
+  >
+    Add to order
+  </button>
+</div>
+`;
+
+exports[`Render MenuItem should show one line item 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="image"
+  >
+    IMAGE
+  </div>
+  <div
+    className="title"
+  >
+    Morning glory
+  </div>
+  <div
+    className="item-price"
+  >
+    50
+  </div>
+  <div
+    className="description"
+  />
+  <button
+    className="menu-item-button"
+  >
+    Add to order
+  </button>
+</div>
+`;

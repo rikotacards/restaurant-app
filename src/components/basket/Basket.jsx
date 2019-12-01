@@ -11,10 +11,10 @@ const style = {
 export const Basket = props => {
   const { basketItems } = props;
 
-  const basketLineItems = basketItems.map(item => {
+  const basketLineItems = basketItems.map((item, index) => {
     const { quantity, name, price, options, selections } = item;
     return (
-      <div className="basket-line-item" key={name}>
+      <div className="basket-line-item" key={name+index}>
         <p>
           {quantity} x {name} HK${price} <br />({options}, {selections})
         </p>

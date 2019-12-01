@@ -1,5 +1,19 @@
 .menu-item-selection-form {
     display: flex; 
     flex-direction: column; 
+    padding: 8px;
     
+}
+
+.menu-item-selection-img {
+    background: gray;
+    height: 200px;
+}
+
+.menu-item-selection-desc{
+    text-align: left;
+}
+
+.quantity{ 
+    height: 40px;
 }

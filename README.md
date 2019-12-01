@@ -1,10 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Steps To Getting Started:
 
 In the project directory, you can run:
 
-### `yarn start`
+## Step 1. Start the server (using json-server)
+### `yarn server`
+
+Runs the json-server on port 3001. 
+
+## Step 2. Start the app
+### `yarn server`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -26,6 +32,14 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+
+### `Known Issues / Areas for improvement`
+
+Handling form errors. Currently, you MUST pick a selection and option, otherwise add to cart button won't work. 
+
+Better handling when there is no data coming in
+
 
 ### `yarn eject`
 

@@ -10,13 +10,14 @@ const style = {
 
 export const Basket = props => {
   const { basketItems } = props;
-const disableButton = basketItems.length === 0; 
+  const disableButton = basketItems.length === 0;
   const basketLineItems = basketItems.map((item, index) => {
     const { quantity, name, price, options, selections } = item;
     return (
-      <div className="basket-line-item" key={name+index}>
+      <div className="basket-line-item" key={name + index}>
         <p>
-          {quantity} x {name} HK${price} <br />({options}, {selections})
+          {quantity} x {name} HK${price / quantity} <br />({options},{" "}
+          {selections})
         </p>
       </div>
     );
@@ -29,7 +30,9 @@ const disableButton = basketItems.length === 0;
       <div className="basket-header">Your Basket</div>
       {basketLineItems.length > 0 ? basketLineItems : "Your basket is empty"}
       {basketLineItems.length > 0 && <p>HK$ {total}</p>}
-      <button disabled={disableButton} className="menu-item-button">Check out</button>
+      <button disabled={disableButton} className="menu-item-button">
+        Check out
+      </button>
     </Card>
   );
 };

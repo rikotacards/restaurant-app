@@ -4,13 +4,11 @@ import { RestaurantDescription } from "../../restaurantDescription/RestaurantDes
 import { MenuItemContainer } from "../../menuItemContainer/MenuItemContainer";
 import { Basket } from "../../basket/Basket";
 import { PopUpModal } from "components/popUpModal/PopUpModal";
-import { RestaurantDataContext } from "components/pages/Restaurant";
 import { BasketContext } from "App";
 
 export const SingleRestaurant = props => {
   const [enablePopUp, setPopUp] = React.useState(false);
   const [itemIndex, setItemIndex] = React.useState(0);
-  const { items } = React.useContext(BasketContext);
 
   const { restaurantData } = props;
 
@@ -18,9 +16,9 @@ export const SingleRestaurant = props => {
   const togglePopUp = index => {
     setPopUp(!enablePopUp);
     setItemIndex(index);
-    console.log("itemIndex", itemIndex);
   };
-  let menuItemDetails = mains[itemIndex];
+
+  let menuItemDetails = mains && mains[itemIndex];
 
   return (
     <>

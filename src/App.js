@@ -6,10 +6,8 @@ export const BasketContext = React.createContext([]);
 const App = () => {
   const [basketItems, getBasketItems] = React.useState([]);
   const handleUpdate = (items) => {
-    
     basketItems.push(items)
     getBasketItems(basketItems);
-    console.log('APP', basketItems)
   }
   return (
     <div className="App">

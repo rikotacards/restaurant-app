@@ -3,8 +3,7 @@ import "./menu-item-selection-form.css";
 import { BasketContext } from "App";
 
 export const MenuItemSelectionForm = props => {
-  const {handleUpdate, items} = React.useContext(BasketContext);
-  console.log('hande',handleUpdate);
+  const { handleUpdate } = React.useContext(BasketContext);
   const [disableAddToCart, setAddToCart] = React.useState(false);
   const [formState, setInput] = React.useState({ quantity: "1" });
   const setFormState = event => {
@@ -29,9 +28,7 @@ export const MenuItemSelectionForm = props => {
       price: menuItemDetails.price * Number(formState.quantity),
       ...formState
     };
-    handleUpdate(itemOrder)
-    console.log('item order selection form', itemOrder);
-    console.log('items in context', items)
+    handleUpdate(itemOrder);
     setAddToCart(true);
   };
   const { menuItemDetails } = props;
@@ -62,16 +59,22 @@ export const MenuItemSelectionForm = props => {
     <>
       <div className="menu-item-selection-form">
         <div className="menu-item-selection-img">{menuItemDetails.image}</div>
-        <div className="menu-item-title">{menuItemDetails.name}</div>
-        <div className="menu-item-selection-desc">
-          {menuItemDetails.description}
+        <div className="item-title">
+          <h5>{menuItemDetails.name}</h5>
         </div>
-        <select name="quantity" onChange={setFormState}>
+        <div className="menu-item-selection-desc">
+          <p>{menuItemDetails.description}</p>
+        </div>
+        <select className="quantity" name="quantity" onChange={setFormState}>
           {selectionQuanity()}
         </select>
         {menuOptions}
       </div>
-      <button onClick={addToCart} disabled={disableAddToCart} className='menu-item-button'>
+      <button
+        onClick={addToCart}
+        disabled={disableAddToCart}
+        className="menu-item-button"
+      >
         {" "}
         {disableAddToCart ? "Item Added!" : "Add to cart"}
       </button>

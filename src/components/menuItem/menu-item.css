@@ -1,7 +1,15 @@
-.title {
+.item-title {
     font-weight: 400;
     color: black;
     text-align: left;
+}
+
+.item-price{
+    margin-left: auto;
+}
+
+.title-price-container{
+    display: flex
 }
 
 .divider {
@@ -18,11 +26,16 @@
 .image {
     width: 100%; 
     height: 150px; 
+    background: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .menu-item-button {
     margin-top: auto;
-    width: 90%;
+    width: 100%;
     height: 40px; 
     border-radius: 4px; 
     background: transparent; 
@@ -32,3 +45,13 @@
 .menu-item-button:hover {
     background: darkgray; 
 }
+
+.all-options-container{
+    text-align: left;
+}
+
+.selections-container{
+    text-align: left;
+
+}
+

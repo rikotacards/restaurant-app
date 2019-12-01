@@ -24,7 +24,7 @@ export const SingleRestaurant = props => {
 
   return (
     <>
-      <div className={enablePopUp && "under-modal"}>
+      <div className={enablePopUp ? "under-modal" : undefined}>
         <div className={`single-restaurant-container`}>
           <div className="restaurant-name-header">
             <h1>{restaurantName}</h1>

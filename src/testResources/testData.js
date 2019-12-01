@@ -1,4 +1,4 @@
-{
+export const testData = {
   "soul_food": {
     "id": 1,
     "restaurantName": "Soul Food",

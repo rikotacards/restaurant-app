@@ -1,14 +1,26 @@
 import React from 'react'; 
 import './basket.css'; 
 import { Card } from 'components/card/Card'
+// import { BasketContext } from 'App';
+
 //map list here
 
 const style = {
     position: 'sticky',
     top: '100px'
-}
-export const Basket = (props) => {
 
+    
+}
+
+export const getTotalBasketPrice = (basketItems) => {
+    if(!basketItems.length){
+        return 0
+    }
+    const total =  basketItems.reduce((total, {price}) => total + price, 0)
+    console.log('total', total)
+    return total
+ }
+export const Basket = (props) => {
     const { basketItems } = props;
    
 
@@ -23,6 +35,10 @@ export const Basket = (props) => {
         )
     })
 
+    
+
+    const total = getTotalBasketPrice(basketItems)
+
     return (
         
        <Card style={style}>
@@ -30,7 +46,8 @@ export const Basket = (props) => {
                Your Basket
            </div>
            {basketLineItems.length > 0 ? basketLineItems : 'Your basket is empty'}
-           <button>Check out</button>
+           {basketLineItems.length > 0 && <p>HK$ {total}</p> }
+           <button className='menu-item-button'>Check out</button>
         </Card>
         
         

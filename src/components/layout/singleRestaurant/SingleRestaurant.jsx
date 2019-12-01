@@ -5,23 +5,22 @@ import { MenuItemContainer } from "../../menuItemContainer/MenuItemContainer";
 import { Basket } from "../../basket/Basket";
 import { PopUpModal } from "components/popUpModal/PopUpModal";
 import { RestaurantDataContext } from "components/pages/Restaurant";
-import { BasketContext } from 'App';
+import { BasketContext } from "App";
 
 export const SingleRestaurant = props => {
   const [enablePopUp, setPopUp] = React.useState(false);
   const [itemIndex, setItemIndex] = React.useState(0);
-  const basketItems = React.useContext(BasketContext);
-
+  const { items } = React.useContext(BasketContext);
 
   const { restaurantData } = props;
 
   const { restaurantDescription, mains, restaurantName } = restaurantData;
-  const togglePopUp = (index) => {
+  const togglePopUp = index => {
     setPopUp(!enablePopUp);
     setItemIndex(index);
-    console.log('itemIndex', itemIndex)
+    console.log("itemIndex", itemIndex);
   };
-  let menuItemDetails = mains[itemIndex]
+  let menuItemDetails = mains[itemIndex];
 
   return (
     <>
@@ -42,12 +41,19 @@ export const SingleRestaurant = props => {
               </div>
             </div>
             <div className="basket-container-column">
-              <Basket basketItems={basketItems}/>
+              <BasketContext.Consumer>
+                {({ items }) => <Basket basketItems={items} />}
+              </BasketContext.Consumer>
             </div>
           </div>
         </div>
       </div>
-      {enablePopUp && <PopUpModal handleCloseModal={togglePopUp} menuItemDetails={menuItemDetails} />}
+      {enablePopUp && (
+        <PopUpModal
+          handleCloseModal={togglePopUp}
+          menuItemDetails={menuItemDetails}
+        />
+      )}
     </>
   );
 };

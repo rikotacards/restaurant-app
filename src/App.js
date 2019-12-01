@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import { SingleRestaurant } from 'components/layout/singleRestaurant/SingleRestaurant'
+import { Restaurant } from 'components/pages/Restaurant'
 function App() {
   return (
     <div className="App">
      
-          <SingleRestaurant/>
+          <Restaurant/>
 
  
     </div>

@@ -13,7 +13,7 @@ export const MenuItemSelectionForm = props => {
       { "name": "options", "selections": ["Topping 1", "Topping 2", "Topping 3"] }
     ]
   };
-
+  const {items } = props;
   const menuOptions = placeHolderOptions["options"].map(mainOption => {
     const optionName = mainOption["name"];
     const subOptions = mainOption["selections"].map(option => {

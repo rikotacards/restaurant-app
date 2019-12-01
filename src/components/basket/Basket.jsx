@@ -26,7 +26,10 @@ export const Basket = (props) => {
     return (
         
        <Card style={style}>
-           {basketLineItems.length > 0 && basketLineItems}
+           <div className='basket-header'>
+               Your Basket
+           </div>
+           {basketLineItems.length > 0 ? basketLineItems : 'Your basket is empty'}
            <button>Check out</button>
         </Card>
         

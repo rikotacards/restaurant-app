@@ -1,12 +1,11 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { MenuItemContainer } from 'components/menuItemContainer/MenuItemContainer'
+import { SingleRestaurant } from 'components/layout/SingleRestaurant'
 function App() {
   return (
     <div className="App">
      
-          <MenuItemContainer/>
+          <SingleRestaurant/>
 
  
     </div>

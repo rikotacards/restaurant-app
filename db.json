@@ -1,13 +1,101 @@
 {
   "soul_food": {
     "id": 1,
+    "restaurantDescription": "authentic place to eat. This is the restaurant description. Great place to eat. It has the best Thai food using the most authentic ingredients. Our chefs cook with passion.", 
     "mains": [
-      { "name": "Pad Thai", "price": 80 },
-      { "name": "Sweet Chili Chiken", "price": 150 },
-      { "name": "Prad ka pow", "price": 100 },
-      { "name": "Deep fried fish", "price": 160 },
-      { "name": "Beef noodles", "price": 100 },
-      { "name": "Prawns and stuff", "price": 190 }
+      {
+        "name": "Pad Thai",
+        "description": "Includes this and that and this and that and great stuff in here",
+        "price": 80,
+        "options": [
+          {
+            "name": "selections",
+            "selections": ["selection 1", "selection 2", "selection 3"]
+          },
+          {
+            "name": "options",
+            "selections": ["Topping 1", "Topping 2", "Topping 3"]
+          }
+        ]
+      },
+      {
+        "name": "Sweet Chili Chiken",
+        "description": "Includes this and that and this and that and great stuff in here",
+
+        "price": 150,
+        "options": [
+          {
+            "name": "selections",
+            "selections": ["selection 1", "selection 2", "selection 3"]
+          },
+          {
+            "name": "options",
+            "selections": ["Topping 1", "Topping 2", "Topping 3"]
+          }
+        ]
+      },
+      {
+        "name": "Prad ka pow",
+        "description": "Includes this and that and this and that and great stuff in here",
+
+        "price": 100,
+        "options": [
+          {
+            "name": "selections",
+            "selections": ["selection 1", "selection 2", "selection 3"]
+          },
+          {
+            "name": "options",
+            "selections": ["Topping 1", "Topping 2", "Topping 3"]
+          }
+        ]
+      },
+      {
+        "name": "Deep fried fish",
+        "description": "Includes this and that and this and that and great stuff in here",
+
+        "price": 160,
+        "options": [
+          {
+            "name": "selections",
+            "selections": ["selection 1", "selection 2", "selection 3"]
+          },
+          {
+            "name": "options",
+            "selections": ["Topping 1", "Topping 2", "Topping 3"]
+          }
+        ]
+      },
+      {
+        "name": "Beef noodles",
+        "description": "Includes this and that and this and that and great stuff in here",
+        "price": 100,
+        "options": [
+          {
+            "name": "selections",
+            "selections": ["selection 1", "selection 2", "selection 3"]
+          },
+          {
+            "name": "options",
+            "selections": ["Topping 1", "Topping 2", "Topping 3"]
+          }
+        ]
+      },
+      {
+        "name": "Prawns and stuff",
+        "description": "Includes this and that and this and that and great stuff in here",
+        "price": 190,
+        "options": [
+          {
+            "name": "selections",
+            "selections": ["selection 1", "selection 2", "selection 3"]
+          },
+          {
+            "name": "options",
+            "selections": ["Topping 1", "Topping 2", "Topping 3"]
+          }
+        ]
+      }
     ],
     "address": "46 Elgin street",
     "phoneNumber": "85473772",

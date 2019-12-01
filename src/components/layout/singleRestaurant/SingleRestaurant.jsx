@@ -1,8 +1,8 @@
 import React from "react";
 import "./single-restaurant.css";
-import { RestaurantDescription } from "../restaurantDescription/RestaurantDescription";
-import { MenuItemContainer } from "../menuItemContainer/MenuItemContainer";
-import { Basket } from "../basket/Basket";
+import { RestaurantDescription } from "../../restaurantDescription/RestaurantDescription";
+import { MenuItemContainer } from "../../menuItemContainer/MenuItemContainer";
+import { Basket } from "../../basket/Basket";
 import { PopUpModal } from "components/popUpModal/PopUpModal";
 
 export const SingleRestaurant = props => {

@@ -1,0 +1,33 @@
+.restaurant-name-header {
+    width: 100%; 
+    text-align: left;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+}
+
+.single-restaurant-container {
+    display: flex;
+    margin: 0 20%;
+    max-width: 960px;
+    flex-direction: column;
+}
+
+.description {
+    width: 100%
+}
+
+.main-content-column {
+    display:flex; 
+    flex-direction: column;
+    flex-grow: 2
+}
+
+.basket-container-column {
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1;
+    padding-left: 4px;
+}

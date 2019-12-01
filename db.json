@@ -1,6 +1,7 @@
 {
   "soul_food": {
     "id": 1,
+    "restaurantName": "Soul Food",
     "restaurantDescription": "authentic place to eat. This is the restaurant description. Great place to eat. It has the best Thai food using the most authentic ingredients. Our chefs cook with passion.", 
     "mains": [
       {

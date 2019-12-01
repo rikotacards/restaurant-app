@@ -7,25 +7,28 @@ import { PopUpModal } from "components/popUpModal/PopUpModal";
 
 export const SingleRestaurant = props => {
   const [enablePopUp, setPopUp ] = React.useState(false);
+  const { restaurantData } = props; 
+
+
+  const { restaurantDescription, mains, restaurantName } = restaurantData;
   const togglePopUp = () => {
     setPopUp(!enablePopUp);
   }
-  // React.useEffect(() => )
 
   return (
     <>
     <div className={enablePopUp && 'under-modal'}>
     <div className={`single-restaurant-container`}>
       <div className='restaurant-name-header'>
-        <h1>Soul Food</h1>
+        <h1>{restaurantName}</h1>
       </div>
       <div className='body'>
       <div className="main-content-column">
         <div className="description">
-          <RestaurantDescription />
+          <RestaurantDescription restaurantDescription={restaurantDescription}/>
         </div>
         <div className="menu-items-grid">
-          <MenuItemContainer handleClick={togglePopUp}/>
+          <MenuItemContainer handleClick={togglePopUp} mains={mains}/>
         </div>
         
       </div>

@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Basket should show one line item 1`] = `
+<div
+  className="card"
+  style={
+    Object {
+      "position": "sticky",
+      "top": "100px",
+    }
+  }
+>
+  <div
+    className="basket-header"
+  >
+    Your Basket
+  </div>
+  <div
+    className="basket-line-item"
+  >
+    <p>
+       x 
+       HK$
+      50
+       
+      <br />
+      (
+      , 
+      )
+    </p>
+  </div>
+  <p>
+    HK$ 
+    50
+  </p>
+  <button
+    className="menu-item-button"
+  >
+    Check out
+  </button>
+</div>
+`;
+
+exports[`Render Basket show Your basket is empty text 1`] = `
+<div
+  className="card"
+  style={
+    Object {
+      "position": "sticky",
+      "top": "100px",
+    }
+  }
+>
+  <div
+    className="basket-header"
+  >
+    Your Basket
+  </div>
+  Your basket is empty
+  <button
+    className="menu-item-button"
+  >
+    Check out
+  </button>
+</div>
+`;

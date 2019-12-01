@@ -7,8 +7,8 @@ export const PopUpModal = (props) => {
     // input dish details 
     return (
         <div id='modal' className='menu-item-modal'>
-            <MenuItemSelectionForm menuItemDetails={menuItemDetails}/>
-            <button onClick={handleCloseModal}>close</button>
+            <MenuItemSelectionForm menuItemDetails={menuItemDetails} />
+            <button className='menu-item-button' onClick={handleCloseModal}>close</button>
         </div>
     )
 }

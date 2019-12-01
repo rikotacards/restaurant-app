@@ -3,7 +3,8 @@ import "./menu-item-selection-form.css";
 import { BasketContext } from "App";
 
 export const MenuItemSelectionForm = props => {
-  const basketContext = React.useContext(BasketContext);
+  const {handleUpdate, items} = React.useContext(BasketContext);
+  console.log('hande',handleUpdate);
   const [disableAddToCart, setAddToCart] = React.useState(false);
   const [formState, setInput] = React.useState({ quantity: "1" });
   const setFormState = event => {
@@ -28,7 +29,9 @@ export const MenuItemSelectionForm = props => {
       price: menuItemDetails.price * Number(formState.quantity),
       ...formState
     };
-    basketContext.push(itemOrder);
+    handleUpdate(itemOrder)
+    console.log('item order selection form', itemOrder);
+    console.log('items in context', items)
     setAddToCart(true);
   };
   const { menuItemDetails } = props;
@@ -68,7 +71,7 @@ export const MenuItemSelectionForm = props => {
         </select>
         {menuOptions}
       </div>
-      <button onClick={addToCart} disabled={disableAddToCart}>
+      <button onClick={addToCart} disabled={disableAddToCart} className='menu-item-button'>
         {" "}
         {disableAddToCart ? "Item Added!" : "Add to cart"}
       </button>

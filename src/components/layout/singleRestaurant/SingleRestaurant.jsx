@@ -4,41 +4,50 @@ import { RestaurantDescription } from "../../restaurantDescription/RestaurantDes
 import { MenuItemContainer } from "../../menuItemContainer/MenuItemContainer";
 import { Basket } from "../../basket/Basket";
 import { PopUpModal } from "components/popUpModal/PopUpModal";
+import { RestaurantDataContext } from "components/pages/Restaurant";
+import { BasketContext } from 'App';
 
 export const SingleRestaurant = props => {
-  const [enablePopUp, setPopUp ] = React.useState(false);
-  const { restaurantData } = props; 
+  const [enablePopUp, setPopUp] = React.useState(false);
+  const [itemIndex, setItemIndex] = React.useState(0);
+  const basketItems = React.useContext(BasketContext);
 
+
+  const { restaurantData } = props;
 
   const { restaurantDescription, mains, restaurantName } = restaurantData;
-  const togglePopUp = () => {
+  const togglePopUp = (index) => {
     setPopUp(!enablePopUp);
-  }
+    setItemIndex(index);
+    console.log('itemIndex', itemIndex)
+  };
+  let menuItemDetails = mains[itemIndex]
 
   return (
     <>
-    <div className={enablePopUp && 'under-modal'}>
-    <div className={`single-restaurant-container`}>
-      <div className='restaurant-name-header'>
-        <h1>{restaurantName}</h1>
-      </div>
-      <div className='body'>
-      <div className="main-content-column">
-        <div className="description">
-          <RestaurantDescription restaurantDescription={restaurantDescription}/>
+      <div className={enablePopUp && "under-modal"}>
+        <div className={`single-restaurant-container`}>
+          <div className="restaurant-name-header">
+            <h1>{restaurantName}</h1>
+          </div>
+          <div className="body">
+            <div className="main-content-column">
+              <div className="description">
+                <RestaurantDescription
+                  restaurantDescription={restaurantDescription}
+                />
+              </div>
+              <div className="menu-items-grid">
+                <MenuItemContainer handleClick={togglePopUp} mains={mains} />
+              </div>
+            </div>
+            <div className="basket-container-column">
+              <Basket basketItems={basketItems}/>
+            </div>
+          </div>
         </div>
-        <div className="menu-items-grid">
-          <MenuItemContainer handleClick={togglePopUp} mains={mains}/>
-        </div>
-        
       </div>
-      <div className="basket-container-column">
-        <Basket />
-      </div>
-      </div>
-    </div>
-    </div>
-    {enablePopUp && <PopUpModal handleCloseModal={togglePopUp}/>}
-   </>
+      {enablePopUp && <PopUpModal handleCloseModal={togglePopUp} menuItemDetails={menuItemDetails} />}
+    </>
   );
 };

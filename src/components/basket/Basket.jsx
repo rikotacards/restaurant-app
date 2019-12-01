@@ -10,7 +10,7 @@ const style = {
 
 export const Basket = props => {
   const { basketItems } = props;
-
+const disableButton = basketItems.length === 0; 
   const basketLineItems = basketItems.map((item, index) => {
     const { quantity, name, price, options, selections } = item;
     return (
@@ -29,7 +29,7 @@ export const Basket = props => {
       <div className="basket-header">Your Basket</div>
       {basketLineItems.length > 0 ? basketLineItems : "Your basket is empty"}
       {basketLineItems.length > 0 && <p>HK$ {total}</p>}
-      <button className="menu-item-button">Check out</button>
+      <button disabled={disableButton} className="menu-item-button">Check out</button>
     </Card>
   );
 };

@@ -10,6 +10,7 @@ export const MenuItem = props => {
     <Card>
       <div className="image">IMAGE</div>
       <div className="title">{singleItem.name}</div>
+      <div className='item-price'>{singleItem.price}</div>
       <div className="description">{singleItem.description}</div>
       <button onClick={handleClick} className="menu-item-button">
         Add to order

@@ -10,8 +10,8 @@ export const MenuItemContainer = (props) => {
 
  
 
-    const gridItems = mains.map((item) => (
-        <MenuItem singleItem={item} handleClick={handleClick}/>
+    const gridItems = mains.map((item, index) => (
+        <MenuItem singleItem={item} handleClick={() => handleClick(index)} key={index}/>
     ))
     return (
         <div className={`grid-container conditional-columns`}>

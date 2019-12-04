@@ -2,6 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Steps To Getting Started:
 
+## Step 0. Run `npm install` or `yarn` to download required packages.
 In the project directory, you can run:
 
 ## Step 1. Start the server (using json-server)

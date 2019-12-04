@@ -7,7 +7,7 @@ export const Restaurant = () => {
 
   React.useEffect(() => {
     axios
-      .get("http://localhost:3001/soul_food")
+      .get("/soul_food")
       .then(response => {
         setData(response.data);
       })
